@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Card, Carousel } from "react-bootstrap";
+import { Jumbotron, Card } from "react-bootstrap";
 import Slider from "react-slick";
 
 export default class RecentItem extends React.Component {
@@ -88,15 +88,6 @@ export default class RecentItem extends React.Component {
         <div>
           <p>RECENT ITEM</p>
         </div>
-        {/* <Carousel controls={false} indicators={false}>
-          <Carousel.Item className='d-flex'>
-            {this.state.recentItems.map((Item) => (
-              <Card style={{ width: "10rem" }}>
-                <Card.Img variant='top' src={Item.src} />
-              </Card>
-            ))}
-          </Carousel.Item>
-        </Carousel> */}
         <Slider {...settings}>
           {this.state.recentItems.map((Item) => (
             <Card style={{ width: "10rem" }}>

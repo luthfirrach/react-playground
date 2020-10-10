@@ -3,6 +3,7 @@ import React from "react";
 // Component
 import Navibar from "./component/navbar.component";
 import RecentItem from "./component/recentItem.component";
+import TrendingCases from "./component/trendingCases.component";
 // import logo from './logo.svg';
 
 // Style
@@ -32,6 +33,7 @@ function App() {
     <div className='App'>
       <Navibar />
       <RecentItem />
+      <TrendingCases />
     </div>
   );
 }
