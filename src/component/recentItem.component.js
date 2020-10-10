@@ -1,5 +1,6 @@
 import React from "react";
 import { Jumbotron, Card, Carousel } from "react-bootstrap";
+import Slider from "react-slick";
 
 export default class RecentItem extends React.Component {
   constructor(props) {
@@ -64,6 +65,14 @@ export default class RecentItem extends React.Component {
     };
   }
   render() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 500,
+      slidesToShow: 8,
+      slidesToScroll: 1,
+    };
     return (
       <Jumbotron className='container bg-transparent'>
         <div className='d-flex'>
@@ -79,7 +88,7 @@ export default class RecentItem extends React.Component {
         <div>
           <p>RECENT ITEM</p>
         </div>
-        <Carousel controls={false} indicators={false}>
+        {/* <Carousel controls={false} indicators={false}>
           <Carousel.Item className='d-flex'>
             {this.state.recentItems.map((Item) => (
               <Card style={{ width: "10rem" }}>
@@ -87,7 +96,14 @@ export default class RecentItem extends React.Component {
               </Card>
             ))}
           </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
+        <Slider {...settings}>
+          {this.state.recentItems.map((Item) => (
+            <Card style={{ width: "10rem" }}>
+              <Card.Img variant='top' src={Item.src} />
+            </Card>
+          ))}
+        </Slider>
       </Jumbotron>
     );
   }
