@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-image: url("https://www.kindpng.com/picc/m/246-2465350_harvest-moon-the-lost-harvest-moon-background-hd.png");
-  position: fixed;
+  position: absolute;
   min-width: 100%;
   min-height: 100%;
   background-size: cover;

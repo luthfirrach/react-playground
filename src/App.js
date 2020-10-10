@@ -2,7 +2,7 @@ import React from "react";
 
 // Component
 import Navibar from "./component/navbar.component";
-import LandingPage from "./component/landingPage.component";
+import RecentItem from "./component/recentItem.component";
 // import logo from './logo.svg';
 
 // Style
@@ -29,7 +29,7 @@ function App() {
     // </div>
     <div className='App'>
       <Navibar />
-      <LandingPage />
+      <RecentItem />
     </div>
   );
 }
