@@ -76,3 +76,7 @@
   transition: 0.6s;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
+
+.trending-cases :hover {
+  transform: translate(0, -10px);
+}

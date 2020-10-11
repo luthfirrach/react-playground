@@ -39,10 +39,10 @@ export default class TrendingCases extends React.Component {
         </div>
         <div className='d-flex'>
           {this.state.containers.map((container) => (
-            <div className='container'>
+            <div className='container trending-cases'>
               <Card
                 style={({ width: "auto" }, { height: "12rem" })}
-                className='bg-transparent'>
+                className='bg-transparent '>
                 <Card.Img variant='top' src={container.src} />
               </Card>
               <Button variant='primary'>Open for Free</Button>
