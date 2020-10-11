@@ -6,7 +6,7 @@ Download or copy this code to your react folder
 
 And you have to install:
 
-npm i bootstrap
+npm i bootstrap <br />
 npm i react-slick --save
 
 Then run it
