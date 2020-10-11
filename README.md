@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Guide
+
+Download or copy this code to your react folder
+
+And you have to install:
+
+npm i bootstrap
+npm i react-slick --save
+
+Then run it
+Thanks.
+
 ## Available Scripts
 
 In the project directory, you can run:
