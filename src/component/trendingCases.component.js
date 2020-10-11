@@ -37,19 +37,16 @@ export default class TrendingCases extends React.Component {
         <div className='container'>
           <h3>Trending Cases</h3>
         </div>
-        <div className='d-flex container'>
+        <div className='d-flex'>
           {this.state.containers.map((container) => (
-            <Card style={{ width: "18rem" }} className='bg-transparent'>
-              <Card.Img variant='top' src={container.src} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
-              </Card.Body>
-            </Card>
+            <div className='container'>
+              <Card
+                style={({ width: "auto" }, { height: "12rem" })}
+                className='bg-transparent'>
+                <Card.Img variant='top' src={container.src} />
+              </Card>
+              <Button variant='primary'>Open for Free</Button>
+            </div>
           ))}
         </div>
       </div>

@@ -7,8 +7,6 @@ export default class NaviBar extends React.Component {
   constructor(props) {
     super(props);
 
-    // Ini state saya hardcode aja dulu ya hehe XD
-
     this.state = {
       navIcons: [
         { Icon: <i class='fa fa-facebook'></i> },

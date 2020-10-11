@@ -74,8 +74,8 @@ export default class RecentItem extends React.Component {
       slidesToScroll: 1,
     };
     return (
-      <Jumbotron className='container bg-transparent'>
-        <div className='d-flex'>
+      <div className='container'>
+        <div className='d-flex justify-content-around col'>
           {this.state.counters.map((counter) => (
             <Card style={({ width: "10rem" }, { background: "none" })}>
               <Card.Body>
@@ -95,7 +95,7 @@ export default class RecentItem extends React.Component {
             </Card>
           ))}
         </Slider>
-      </Jumbotron>
+      </div>
     );
   }
 }
