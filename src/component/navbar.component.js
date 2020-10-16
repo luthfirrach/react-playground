@@ -19,7 +19,7 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+        <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
           <div>
             <img src={logo} className='App-logo' alt='logo' />
           </div>
@@ -34,7 +34,7 @@ export default class NavBar extends React.Component {
             aria-controls='navbarsExampleDefault'
             aria-expanded='false'
             aria-label='Toggle navigation'>
-            <span class='navbar-toggler-icon'></span>
+            <span className='navbar-toggler-icon'></span>
           </button>
 
           <div class='collapse navbar-collapse' id='navbarsExampleDefault'>

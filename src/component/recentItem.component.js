@@ -93,7 +93,6 @@ export default class RecentItem extends React.Component {
 
   updateSlickSetting() {
     var { slickSetting } = { ...this.state };
-    console.log("first", slickSetting);
     if (window.innerWidth > 700) {
       slickSetting.slidesToShow = 8;
       this.setState({ slickSetting });
@@ -121,13 +120,30 @@ export default class RecentItem extends React.Component {
           </div>
         </div>
 
-        <Slider {...this.state.slickSetting}>
-          {this.state.recentItems.map((Item) => (
-            <Card style={{ width: "10rem" }}>
-              <Card.Img variant='top' src={Item.src} />
-            </Card>
-          ))}
-        </Slider>
+        <div className='mb-3'>
+          <Slider {...this.state.slickSetting}>
+            {this.state.recentItems.map((Item) => (
+              <div class='ui card'>
+                <div class='image'>
+                  <img style={{ height: "20vh" }} src={Item.src} />
+                </div>
+                <div class='content'>
+                  <a class='header'>{Item.title} </a>
+                  <div class='meta'>
+                    <span class='date'>Joined in 2013</span>
+                  </div>
+                  <div class='description'>This is description...</div>
+                </div>
+                <div class='extra content'>
+                  <a>
+                    <i class='user icon'></i>
+                    22 Friends
+                  </a>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     );
   }

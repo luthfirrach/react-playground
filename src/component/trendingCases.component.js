@@ -33,19 +33,29 @@ export default class TrendingCases extends React.Component {
 
   render() {
     return (
-      <div className='container'>
-        <div className='container'>
-          <h3>Trending Cases</h3>
+      <div>
+        <div className='row mb-3'>
+          <div className='col'>
+            <p class='ui horizontal divider header'>TRENDING ITEM</p>
+          </div>
         </div>
-        <div className='d-flex'>
+        <div className='row d-flex'>
           {this.state.containers.map((container) => (
-            <div className='container trending-cases'>
-              <Card
-                style={({ width: "auto" }, { height: "12rem" })}
-                className='bg-transparent '>
-                <Card.Img variant='top' src={container.src} />
-              </Card>
-              <Button variant='primary'>Open for Free</Button>
+            <div className='col my-1 mx-1'>
+              <div class='ui four card'>
+                <a class='red card'>
+                  <div class='image'>
+                    <img style={{ height: "15vh" }} src={container.src} />
+                  </div>
+                </a>
+              </div>
+
+              <div class='ui animated button' tabindex='0'>
+                <div class='visible content'>Next</div>
+                <div class='hidden content'>
+                  <i class='right arrow icon'></i>
+                </div>
+              </div>
             </div>
           ))}
         </div>
