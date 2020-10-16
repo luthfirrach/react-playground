@@ -121,11 +121,6 @@ export default class RecentItem extends React.Component {
           </div>
         </div>
 
-        <h3>
-          Window width: {this.state.width} and height: {this.state.height}
-        </h3>
-        <h3>slidetoshow: {this.state.slickSetting.slidesToShow}</h3>
-
         <Slider {...this.state.slickSetting}>
           {this.state.recentItems.map((Item) => (
             <Card style={{ width: "10rem" }}>
