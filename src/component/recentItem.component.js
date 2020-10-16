@@ -74,7 +74,7 @@ export default class RecentItem extends React.Component {
       slidesToScroll: 1,
     };
     return (
-      <div className='container'>
+      <div className='container mt-5'>
         <div className='d-flex justify-content-around col'>
           {this.state.counters.map((counter) => (
             <Card style={({ width: "10rem" }, { background: "none" })}>

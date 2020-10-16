@@ -1,7 +1,7 @@
 import React from "react";
 
 // Component
-import Navibar from "./component/navbar.component";
+import NavBar from "./component/navbar.component";
 import RecentItem from "./component/recentItem.component";
 import TrendingCases from "./component/trendingCases.component";
 // import logo from './logo.svg';
@@ -14,26 +14,12 @@ import "./App.css";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    // {/* <img src={logo} className="App-logo" alt="logo" />
-    // <p>
-    //   Edit <code>src/App.js</code> and save to reload.
-    // </p>
-    // <a
-    //   className="App-link"
-    //   href="https://reactjs.org"
-    //   target="_blank"
-    //   rel="noopener noreferrer"
-    // >
-    //   Learn React
-    // </a> */}
-    //   </header>
-    // </div>
-    <div className='App'>
-      <Navibar />
-      <RecentItem />
-      <TrendingCases />
+    <div>
+      <NavBar />
+      <div className='container'>
+        <RecentItem />
+        <TrendingCases />
+      </div>
     </div>
   );
 }
