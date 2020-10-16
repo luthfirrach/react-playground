@@ -62,17 +62,48 @@ export default class RecentItem extends React.Component {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQN63o_oTjRnHDE0rIMNSyHr9JQPLh5mtS-5g&usqp=CAU",
         },
       ],
+      slickSetting: {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 500,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+      },
+
+      width: window.innerWidth,
+      height: window.innerHeight,
     };
+
+    this.updateDimensions = this.updateDimensions.bind(this);
+    this.updateSlickSetting = this.updateSlickSetting.bind(this);
   }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener("resize", this.updateSlickSetting);
+  }
+
+  updateDimensions() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    });
+  }
+
+  updateSlickSetting() {
+    var { slickSetting } = { ...this.state };
+    console.log("first", slickSetting);
+    if (window.innerWidth > 700) {
+      slickSetting.slidesToShow = 8;
+      this.setState({ slickSetting });
+    } else {
+      slickSetting.slidesToShow = 5;
+      this.setState({ slickSetting });
+    }
+  }
+
   render() {
-    var settings = {
-      dots: false,
-      infinite: true,
-      autoplay: true,
-      speed: 500,
-      slidesToShow: 8,
-      slidesToScroll: 1,
-    };
     return (
       <div className='mt-5'>
         <div className='row d-flex justify-content-around mb-3'>
@@ -90,7 +121,12 @@ export default class RecentItem extends React.Component {
           </div>
         </div>
 
-        <Slider {...settings}>
+        <h3>
+          Window width: {this.state.width} and height: {this.state.height}
+        </h3>
+        <h3>slidetoshow: {this.state.slickSetting.slidesToShow}</h3>
+
+        <Slider {...this.state.slickSetting}>
           {this.state.recentItems.map((Item) => (
             <Card style={{ width: "10rem" }}>
               <Card.Img variant='top' src={Item.src} />
@@ -99,5 +135,8 @@ export default class RecentItem extends React.Component {
         </Slider>
       </div>
     );
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 }

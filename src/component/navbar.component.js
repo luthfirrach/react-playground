@@ -23,7 +23,7 @@ export default class NavBar extends React.Component {
           <div>
             <img src={logo} className='App-logo' alt='logo' />
           </div>
-          <a class='navbar-brand' href='#'>
+          <a className='navbar-brand' href='#'>
             Navbar
           </a>
           <button
